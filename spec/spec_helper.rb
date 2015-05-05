@@ -1,3 +1,7 @@
+require 'simplecov'
+
+SimpleCov.start
+
 require 'combustion'
 
 ENV['RAILS_ENV'] ||= 'test'
