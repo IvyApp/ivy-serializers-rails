@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe PostsController, :type => :controller do
-  fixtures :posts
+  fixtures :comments, :posts
 
   describe 'on GET to #index' do
     before do

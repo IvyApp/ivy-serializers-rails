@@ -1,10 +1,31 @@
 {
+  "comment": {
+    "type": "object",
+    "required": ["body", "id", "post_id"],
+    "properties": {
+      "body": { "type": "string" },
+      "id": { "$ref": "#/id" },
+      "post_id": { "type": "#/id" }
+    }
+  },
+
+  "comments": {
+    "type": "array",
+    "items": { "$ref": "#/comment" }
+  },
+
   "id": { "type": "integer" },
+
+  "ids": {
+    "type": "array",
+    "items": { "$ref": "#/id" }
+  },
 
   "post": {
     "type": "object",
-    "required": ["id", "title"],
+    "required": ["comment_ids", "id", "title"],
     "properties": {
+      "comment_ids": { "$ref": "#/ids" },
       "id": { "$ref": "#/id" },
       "title": { "type": "string" }
     }

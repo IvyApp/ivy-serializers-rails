@@ -1,0 +1,6 @@
+rails_is_omakase_1:
+  post: rails_is_omakase
+  body: What is omakase?
+rails_is_omakase_2:
+  post: rails_is_omakase
+  body: Rails is unagi.

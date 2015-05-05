@@ -1,20 +1,80 @@
 {
+  "comment": {
+    "type": "object",
+    "required": ["id", "links", "type"],
+    "properties": {
+      "id": { "$ref": "#/id" },
+      "links": {
+        "type": "object",
+        "required": ["post"],
+        "properties": {
+          "post": {
+            "type": "object",
+            "required": ["linkage"],
+            "properties": {
+              "linkage": { "$ref": "#/linkage" }
+            }
+          }
+        }
+      },
+      "type": { "$ref": "#/type" }
+    }
+  },
+
+  "comments": {
+    "type": "array",
+    "items": { "$ref": "#/comment" }
+  },
+
   "id": { "type": "string" },
 
-  "post": {
+  "ids": {
+    "type": "array",
+    "items": { "$ref": "#/id" }
+  },
+
+  "linkage": {
     "type": "object",
     "required": ["id", "type"],
     "properties": {
       "id": { "$ref": "#/id" },
-      "type": {
-        "type": "string",
-        "pattern": "^post$"
-      }
+      "type": { "$ref": "#/type" }
+    }
+  },
+
+  "linkages": {
+    "type": "array",
+    "items": { "$ref": "#/linkage" }
+  },
+
+  "post": {
+    "type": "object",
+    "required": ["id", "links", "type"],
+    "properties": {
+      "id": { "$ref": "#/id" },
+      "links": {
+        "type": "object",
+        "required": ["comments"],
+        "properties": {
+          "comments": {
+            "type": "object",
+            "required": ["linkage"],
+            "properties": {
+              "linkage": { "$ref": "#/linkages" }
+            }
+          }
+        }
+      },
+      "type": { "$ref": "#/type" }
     }
   },
 
   "posts": {
     "type": "array",
     "items": { "$ref": "#/post" }
+  },
+
+  "type": {
+    "enum": ["comment", "post"]
   }
 }

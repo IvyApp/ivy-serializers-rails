@@ -1,7 +1,14 @@
 {
   "type": "object",
-  "required": ["data"],
+  "required": ["data", "included"],
   "properties": {
-    "data": { "$ref": "json_api_definitions.json#/post" }
+    "data": { "$ref": "json_api_definitions.json#/post" },
+    "included": {
+      "type": "object",
+      "required": ["comments"],
+      "properties": {
+        "comments": { "$ref": "json_api_definitions.json#/comments" }
+      }
+    }
   }
 }

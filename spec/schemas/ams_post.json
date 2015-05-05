@@ -1,7 +1,8 @@
 {
   "type": "object",
-  "required": ["post"],
+  "required": ["comments", "post"],
   "properties": {
+    "comments": { "$ref": "ams_definitions.json#/comments" },
     "post": { "$ref": "ams_definitions.json#/post" }
   }
 }
