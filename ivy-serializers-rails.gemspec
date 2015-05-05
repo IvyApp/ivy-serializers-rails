@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'ivy-serializers', '~> 0.2'
   spec.add_dependency 'railties', '>= 3.2.6', '< 5'
 
+  spec.add_development_dependency 'appraisal', '~> 2.0'
   spec.add_development_dependency 'bundler', '~> 1.9'
   spec.add_development_dependency 'combustion', '~> 0.5.3'
   spec.add_development_dependency 'json-schema-rspec'
