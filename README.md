@@ -1,5 +1,7 @@
 # ivy-serializers-rails
 
+[![Build Status](https://travis-ci.org/IvyApp/ivy-serializers-rails.svg?branch=master)](https://travis-ci.org/IvyApp/ivy-serializers-rails)
+
 Rails integration for
 [ivy-serializers](https://github.com/ivyapp/ivy-serializers).
 
