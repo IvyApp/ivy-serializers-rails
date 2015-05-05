@@ -1,0 +1,17 @@
+{
+  "id": { "type": "integer" },
+
+  "post": {
+    "type": "object",
+    "required": ["id", "title"],
+    "properties": {
+      "id": { "$ref": "#/id" },
+      "title": { "type": "string" }
+    }
+  },
+
+  "posts": {
+    "type": "array",
+    "items": { "$ref": "#/post" }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": { "type": "string" },
+
+  "post": {
+    "type": "object",
+    "required": ["id", "type"],
+    "properties": {
+      "id": { "$ref": "#/id" },
+      "type": {
+        "type": "string",
+        "pattern": "^post$"
+      }
+    }
+  },
+
+  "posts": {
+    "type": "array",
+    "items": { "$ref": "#/post" }
+  }
+}
