@@ -1,7 +1,10 @@
 language: ruby
+
 rvm:
   - 2.2.1
+
 before_install: gem install bundler -v 1.9.4
+
 notifications:
   email:
     on_success: change
