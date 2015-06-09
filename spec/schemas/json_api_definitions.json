@@ -1,16 +1,16 @@
 {
   "comment": {
     "type": "object",
-    "required": ["id", "links", "type"],
+    "required": ["id", "type"],
     "properties": {
       "id": { "$ref": "#/id" },
-      "links": {
+      "relationships": {
         "type": "object",
         "required": ["post"],
         "properties": {
           "post": {
             "type": "object",
-            "required": ["linkage"],
+            "required": ["data"],
             "properties": {
               "linkage": { "$ref": "#/linkage" }
             }
@@ -49,18 +49,18 @@
 
   "post": {
     "type": "object",
-    "required": ["id", "links", "type"],
+    "required": ["id", "type"],
     "properties": {
       "id": { "$ref": "#/id" },
-      "links": {
+      "relationships": {
         "type": "object",
         "required": ["comments"],
         "properties": {
           "comments": {
             "type": "object",
-            "required": ["linkage"],
+            "required": ["data"],
             "properties": {
-              "linkage": { "$ref": "#/linkages" }
+              "data": { "$ref": "#/linkages" }
             }
           }
         }
