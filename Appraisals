@@ -8,5 +8,5 @@ appraise "rails-4.x" do
 end
 
 appraise "rails-5.x" do
-  gem "rails", "~> 5.0"
+  # Rails 5 is the default environment (see ivy-serializers-rails.gemspec)
 end
