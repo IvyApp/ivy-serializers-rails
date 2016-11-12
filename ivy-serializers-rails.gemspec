@@ -15,15 +15,15 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'ivy-serializers', '~> 0.4.0'
-  spec.add_dependency 'railties', '>= 3.2.6', '< 5'
+  spec.add_dependency 'railties', '>= 3.2.6', '< 6'
 
   spec.add_development_dependency 'appraisal', '~> 2.0'
   spec.add_development_dependency 'bundler', '~> 1.9'
   spec.add_development_dependency 'combustion', '~> 0.5.3'
   spec.add_development_dependency 'json-schema-rspec'
-  spec.add_development_dependency 'rails', '~> 4.2.1'
+  spec.add_development_dependency 'rails', '~> 5.0'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec-rails', '~> 3.2.1'
+  spec.add_development_dependency 'rspec-rails', '~> 3.5'
   spec.add_development_dependency 'simplecov', '~> 0.10.0'
   spec.add_development_dependency 'sqlite3', '~> 1.3.10'
 end
