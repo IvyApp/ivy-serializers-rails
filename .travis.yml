@@ -3,7 +3,7 @@ language: ruby
 rvm:
   - 2.0
   - 2.1
-  - 2.2
+  - 2.2.2
 
 cache: bundler
 
@@ -13,6 +13,13 @@ gemfile:
   - gemfiles/rails_3.x.gemfile
   - gemfiles/rails_4.x.gemfile
   - gemfiles/rails_5.x.gemfile
+
+matrix:
+  exclude:
+    - rvm: 2.0
+      gemfile: gemfiles/rails_5.x.gemfile
+    - rvm: 2.1
+      gemfile: gemfiles/rails_5.x.gemfile
 
 notifications:
   email:
