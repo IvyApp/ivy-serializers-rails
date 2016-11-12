@@ -1,7 +1,0 @@
-{
-  "type": "object",
-  "required": ["data"],
-  "properties": {
-    "data": { "$ref": "json_api_definitions.json#/posts" }
-  }
-}

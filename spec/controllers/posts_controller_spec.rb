@@ -23,7 +23,7 @@ RSpec.describe PostsController, :type => :controller do
     specify { expect(response).to have_http_status(:success) }
 
     it 'renders a collection of post resources in the JSON-API format' do
-      expect(response.body).to match_json_schema(:json_api_posts)
+      expect(response.body).to match_json_schema(:json_api)
     end
   end
 
@@ -47,7 +47,7 @@ RSpec.describe PostsController, :type => :controller do
     specify { expect(response).to have_http_status(:success) }
 
     it 'renders an individual post resource in the JSON-API format' do
-      expect(response.body).to match_json_schema(:json_api_post)
+      expect(response.body).to match_json_schema(:json_api)
     end
   end
 end
